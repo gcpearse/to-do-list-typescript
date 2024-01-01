@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import './styles.css'
 
 interface Props {
@@ -7,15 +8,22 @@ interface Props {
 }
 
 const Input: React.FC<Props> = ({ input, setInput, handleSubmit }) => {
+
+  const inputRef = useRef<HTMLInputElement>(null)
+
   return (
     <form
       className='input-form'
-      onSubmit={handleSubmit}>
+      onSubmit={(event) => {
+        handleSubmit(event)
+        inputRef.current?.blur()
+      }}>
       <input
         type='text'
         className='input-field'
         placeholder='Enter a input'
         value={input}
+        ref={inputRef}
         onChange={(event) => setInput(event.target.value)} />
       <button
         type='submit'
