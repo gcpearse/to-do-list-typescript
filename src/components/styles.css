@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  margin-bottom: 1.3em;
   width: 90%;
 }
 
@@ -40,4 +41,31 @@
 
 .input-btn:active {
   transform: scale(0.9)
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.task-form {
+  display: flex;
+  align-items: center;
+  margin-top: 1.2em;
+  border-radius: 4px;
+  width: 85%;
+  padding: 1em;
+  background: #FEFAE0;
+}
+
+.task-text {
+  flex: 1;
+  font-weight: 300;
+}
+
+.task-icon {
+  margin-left: 0.4em;
+  cursor: pointer;
 }
