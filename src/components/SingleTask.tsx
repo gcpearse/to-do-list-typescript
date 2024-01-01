@@ -9,17 +9,46 @@ interface Props {
 }
 
 const SingleTask: React.FC<Props> = ({ task, tasks, setTasks }) => {
+
+  const handleDelete = (id: number) => {
+    setTasks(() => {
+      return tasks.filter((task) => {
+        return task.id !== id
+      })
+    })
+  }
+
+  const handleDone = (id: number) => {
+    setTasks(() => {
+      return tasks.map((task) => {
+        if (task.id === id) {
+          return { ...task, isComplete: !task.isComplete }
+        } else {
+          return task
+        }
+      })
+    })
+  }
+
   return (
     <form className='task-form'>
-      <span className='task-text'>{task.task}</span>
+      {!task.isComplete ? (
+        <span className='task-text'>{task.task}</span>
+      ) : (
+        <s className='task-text'>{task.task}</s>
+      )}
       <div>
         <span className='task-icon'>
           <MdModeEdit />
         </span>
-        <span className='task-icon'>
+        <span
+          className='task-icon'
+          onClick={() => handleDelete(task.id)}>
           <MdDelete />
         </span>
-        <span className='task-icon'>
+        <span
+          className='task-icon'
+          onClick={() => handleDone(task.id)}>
           <MdDone />
         </span>
       </div>
