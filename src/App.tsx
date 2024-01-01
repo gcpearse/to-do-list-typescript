@@ -2,10 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import Input from './components/Input'
 import { Task } from './model'
+import TaskList from './components/TaskList'
 
 const App: React.FC = () => {
 
-  const [input, setInput] = useState<string>("")
+  const [input, setInput] = useState<string>('')
   const [id, setId] = useState<number>(0)
   const [tasks, setTasks] = useState<Task[]>([])
 
@@ -18,7 +19,7 @@ const App: React.FC = () => {
         task: input,
         isComplete: false
       }])
-      setInput("")
+      setInput('')
     }
   }
 
@@ -26,6 +27,7 @@ const App: React.FC = () => {
     <>
       <h1>Sortmin</h1>
       <Input input={input} setInput={setInput} handleSubmit={handleSubmit} />
+      <TaskList tasks={tasks} setTasks={setTasks} />
     </>
   )
 }
