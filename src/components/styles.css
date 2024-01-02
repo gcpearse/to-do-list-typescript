@@ -21,25 +21,33 @@
   line-height: 1.8rem;
 }
 
-.input-btn {
-  position: absolute;
-  right: 2px;
-  margin: 0.4em;
+button {
   box-shadow: 0 0 3px #222222;
   border: none;
   border-radius: 50px;
-  height: 40px;
-  width: 40px;
   background: #FAEDCD;
   font-size: 1.1rem;
   transition: 0.3s all;
 }
 
-.input-btn:hover {
+.input-btn {
+  position: absolute;
+  right: 2px;
+  margin: 0.4em;
+  height: 40px;
+  width: 40px;
+}
+
+.clear-btn {
+  margin-top: 1.6em;
+  padding: 0.4em 1em;
+}
+
+.input-btn:hover, .clear-btn:hover {
   background: #FEFAE0;
 }
 
-.input-btn:active {
+.input-btn:active, .clear-btn:active {
   transform: scale(0.9)
 }
 
@@ -50,10 +58,19 @@
   width: 90%;
 }
 
+.confirm-section {
+  margin-top: 1.6em;
+}
+
+.confirm-btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .task-form {
   display: flex;
   align-items: center;
-  margin-top: 1.2em;
+  margin-top: 1.1em;
   border-radius: 4px;
   width: 85%;
   padding: 1em;
