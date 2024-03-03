@@ -21,6 +21,7 @@ const Input: React.FC<Props> = ({ input, setInput, handleSubmit }) => {
       <input
         type='text'
         className='input-field'
+        id='task-input'
         placeholder='Enter a task...'
         value={input}
         ref={inputRef}
