@@ -32,6 +32,9 @@ button {
 
 .input-btn {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   right: 2px;
   margin: 0.4em;
   height: 40px;
