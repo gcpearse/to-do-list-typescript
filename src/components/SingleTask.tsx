@@ -65,7 +65,7 @@ const SingleTask: React.FC<Props> = ({ task, tasks, setTasks }) => {
       ) : (
         <s className='task-text'>{task.task}</s>
       )}
-      <div>
+      <div className='task-icon-wrapper'>
         <span
           className='task-icon'
           onClick={() => {
