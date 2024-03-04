@@ -4,6 +4,7 @@
   align-items: center;
   margin-bottom: 1.3em;
   width: 90%;
+  max-width: 800px;
 }
 
 .input-field {
@@ -79,6 +80,7 @@ button {
   margin-top: 1.1em;
   border-radius: 4px;
   width: 80vw;
+  max-width: 750px;
   padding: 1em;
   background: #FEFAE0;
 }
@@ -97,6 +99,7 @@ button {
   display: flex;
   justify-content: space-between;
   width: 20%;
+  max-width: 80px;
 }
 
 .task-icon {
