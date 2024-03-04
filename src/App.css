@@ -19,6 +19,7 @@ h1 {
   font-size: 3.2rem;
 }
 
-button:hover, button:active {
+button:hover,
+button:active {
   cursor: pointer;
 }
